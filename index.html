@@ -1,44 +1,96 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
-    <meta name="renderer" content="webkit"/>
-    <meta name="force-rendering" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <link rel="stylesheet" href="./style.css">
 
-    <!-- MDUI CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
-      integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
-      crossorigin="anonymous"
-    />
-    <title>Hello, world!</title>
-  </head>
-  <body class="mdui-theme-primary-teal mdui-theme-accent-teal mdui-theme-layout-auto mdui-bottom-nav-fixed">
-    <div class="mdui-appbar">
-        <div class="mdui-toolbar mdui-color-theme">
-          <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
-          <a href="javascript:;" class="mdui-typo-headline">地铁计算器</a>
-          <a href="javascript:;" class="mdui-typo-title">Release Channel</a>
-          <div class="mdui-toolbar-spacer"></div>
-          <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>
-          <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
-          <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
-        </div>
-      </div>
-      <div class="mdui-typo background">
-          <h1>暂未完工</h1>
-          尽情期待
-      </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+  <meta name="renderer" content="webkit" />
+  <meta name="force-rendering" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="stylesheet" href="./style.css">
 
-    <!-- MDUI JavaScript -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
-      integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <!-- MDUI CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
+    integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
+  <title>Hello, world!</title>
+</head>
+
+<body class="mdui-theme-primary-teal mdui-theme-accent-teal mdui-theme-layout-auto mdui-bottom-nav-fixed">
+  <div class="mdui-typo background">
+    <h1><span><i>暂</i></span><span><i>未</i></span><span><i>完</i></span><span><i>工</i></span></h1>
+    <p>尽情期待</p>
+  </div>
+  <style>
+    span {
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+      top: 0.8rem;
+      animation: .3s up ease-in-out forwards;
+    }
+
+    i {
+      font-style: normal;
+      position: relative;
+      top: 2.2rem;
+      animation: .5s up ease-in-out forwards;
+    }
+
+    p {
+      top: 0.8rem;
+      opacity: 0;
+      animation: .5s up ease-out forwards, .5s in ease-out forwards;
+      animation-delay:.5s;
+    }
+
+@keyframes in {
+  to{
+    opacity: 1;
+  }
+}
+
+    @keyframes up {
+      to {
+        top: 0rem;
+      }
+    }
+
+    span:nth-of-type(1) i {
+      animation-delay: 0s;
+    }
+
+    span:nth-of-type(2) i {
+      animation-delay: .1s;
+    }
+
+    span:nth-of-type(3) i {
+      animation-delay: .2s;
+    }
+
+    span:nth-of-type(4) i {
+      animation-delay: .3s;
+    }
+
+    span:nth-of-type(1) {
+      animation-delay: 0s;
+    }
+
+    span:nth-of-type(2) {
+      animation-delay: .1s;
+    }
+
+    span:nth-of-type(3) {
+      animation-delay: .2s;
+    }
+
+    span:nth-of-type(4) {
+      animation-delay: .3s;
+    }
+  </style>
+  <!-- MDUI JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+    integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
